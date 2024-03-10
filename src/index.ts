@@ -1,13 +1,11 @@
 import express from 'express'
-
 import { AppDataSource } from './data-source'
+import routes from './routes'
 
 const app =express();
 app.use(express.json());
 
-app.get('/',(req,res)=>{
-    return res.json('All ok');
-})
+app.use(routes)
 
 
 AppDataSource.initialize().then(()=>{
