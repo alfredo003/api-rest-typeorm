@@ -1,14 +1,17 @@
-import { Entity } from "typeorm";
+import { Column, Entity, OneToMany, PrimaryColumn } from "typeorm";
+import { Video } from "./Video";
 
  @Entity('rooms')
 class Room
 {
-id:number
+    @PrimaryColumn()
+    id:number
 
-name:string
+    @Column({type:'text'})
+    name:string
 
-
-
+    @OneToMany(()=>Video,video=>video.room)
+    videos: Video[]
 }
 
 export {Room};
