@@ -10,6 +10,9 @@ export class Video
     @Column({type:'text'})
     title:string
 
+    @Column({type:'text',nullable:true})
+    description:string
+
     @Column({type:'text'})
     url:string
 
