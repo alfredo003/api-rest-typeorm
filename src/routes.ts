@@ -3,6 +3,6 @@ import { SubjectController } from "./controllers/SubjectControler";
 
 const routes = Router()
 
-routes.post('/subject',(new SubjectController).create)
+routes.post('/subjects',(new SubjectController).create)
 
 export default routes

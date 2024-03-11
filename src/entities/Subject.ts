@@ -1,10 +1,10 @@
-import { Column, Entity, JoinTable, ManyToMany, PrimaryColumn } from "typeorm";
+import { Column, Entity, JoinTable, ManyToMany, PrimaryGeneratedColumn } from "typeorm";
 import { Room } from "./Room";
 
 @Entity('subjects')
 class Subject
 {
-    @PrimaryColumn()
+    @PrimaryGeneratedColumn()
     id:number;
 
     @Column({type:'text'})
