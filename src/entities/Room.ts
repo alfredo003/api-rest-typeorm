@@ -1,11 +1,11 @@
-import { Column, Entity, ManyToMany, OneToMany, PrimaryColumn } from "typeorm";
+import { Column, Entity, ManyToMany, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 import { Video } from "./Video";
 import { Subject } from "./Subject";
 
  @Entity('rooms')
 class Room
 {
-    @PrimaryColumn()
+    @PrimaryGeneratedColumn()
     id:number
 
     @Column({type:'text'})
